@@ -34,6 +34,7 @@ LIBVORBIS_OBJECTS := $(patsubst %.c,%.o,$(LIBVORBIS_SOURCES))
 LIBVORBISFILE_OBJECTS := $(patsubst %.c,%.o,$(LIBVORBISFILE_SOURCES))
 
 CFLAGS ?= -O2
+CFLAGS += -Iinclude -I$(prefix)/include
 
 .PHONY: install
 
