@@ -53,7 +53,7 @@ $(libdir)/%.a: %.a
 install: $(HEADERS_INST) $(libdir)/$(LIBVORBIS) $(libdir)/$(LIBVORBISFILE)
 
 clean:
-	$(RM) $(OBJECTS) $(LIBVORBIS) $(LIBVORBISFILE) .cflags
+	$(RM) $(LIBVORBIS_OBJECTS) $(LIBVORBISFILE_OBJECTS) $(LIBVORBIS) $(LIBVORBISFILE) .cflags
 
 distclean: clean
 
