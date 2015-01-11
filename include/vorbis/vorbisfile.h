@@ -54,7 +54,7 @@ static int _ov_header_fseek_wrap(FILE *f,ogg_int64_t off,int whence){
 
 #ifdef __MINGW32__
   return fseeko64(f,off,whence);
-#elif defined (_WIN32)
+#elif defined (_MSC_VER)
   return _fseeki64(f,off,whence);
 #else
   return fseek(f,off,whence);
