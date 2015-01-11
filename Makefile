@@ -10,6 +10,8 @@ ifndef V
 endif
 endif
 
+uname_S ?= $(shell uname -s)
+
 LIBVORBIS     = libvorbis.a
 LIBVORBISFILE = libvorbisfile.a
 AR    ?= ar
@@ -35,6 +37,10 @@ LIBVORBISFILE_OBJECTS := $(patsubst %.c,%.o,$(LIBVORBISFILE_SOURCES))
 
 CFLAGS ?= -O2
 CFLAGS += -Iinclude -I$(prefix)/include
+
+ifneq (,$(findstring CYGWIN,$(uname_S)))
+CFLAGS += -D_WIN32
+endif
 
 .PHONY: install
 
