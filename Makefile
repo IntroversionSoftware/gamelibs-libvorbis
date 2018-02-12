@@ -14,7 +14,8 @@ uname_S ?= $(shell uname -s)
 
 LIBVORBIS     = libvorbis.a
 LIBVORBISFILE = libvorbisfile.a
-AR    ?= ar rcu
+AR    ?= ar
+ARFLAGS ?= rcu
 CC    ?= gcc
 RANLIB?= ranlib
 RM    ?= rm -f
@@ -64,11 +65,11 @@ clean:
 distclean: clean
 
 $(LIBVORBIS): $(LIBVORBIS_OBJECTS)
-	$(QUIET_AR)$(AR) $@ $^
+	$(QUIET_AR)$(AR) $(ARFLAGS) $@ $^
 	$(QUIET_RANLIB)$(RANLIB) $@
 
 $(LIBVORBISFILE): $(LIBVORBISFILE_OBJECTS)
-	$(QUIET_AR)$(AR) $@ $^
+	$(QUIET_AR)$(AR) $(ARFLAGS) $@ $^
 	$(QUIET_RANLIB)$(RANLIB) $@
 
 %.o: %.c .cflags
