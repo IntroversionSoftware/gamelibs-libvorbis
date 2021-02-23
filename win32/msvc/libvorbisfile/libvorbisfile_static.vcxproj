@@ -119,10 +119,9 @@
       <MinimalRebuild>true</MinimalRebuild>
       <PrecompiledHeader />
       <CallingConvention>Cdecl</CallingConvention>
+      <WarningLevel>Level2</WarningLevel>
     </ClCompile>
-    <Lib>
-      <OutputFile>$(OutDir)$(ProjectName)_static.lib</OutputFile>
-    </Lib>
+    <Lib />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
@@ -134,10 +133,9 @@
       <MinimalRebuild>true</MinimalRebuild>
       <PrecompiledHeader />
       <CallingConvention>Cdecl</CallingConvention>
+      <WarningLevel>Level2</WarningLevel>
     </ClCompile>
-    <Lib>
-      <OutputFile>$(OutDir)$(ProjectName)_static.lib</OutputFile>
-    </Lib>
+    <Lib />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <Midl />
@@ -148,10 +146,9 @@
       <PrecompiledHeader>
       </PrecompiledHeader>
       <CallingConvention>Cdecl</CallingConvention>
+      <WarningLevel>Level2</WarningLevel>
     </ClCompile>
-    <Lib>
-      <OutputFile>$(OutDir)$(ProjectName)_static.lib</OutputFile>
-    </Lib>
+    <Lib />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -160,10 +157,9 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBVORBISFILE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader />
       <CallingConvention>Cdecl</CallingConvention>
+      <WarningLevel>Level2</WarningLevel>
     </ClCompile>
-    <Lib>
-      <OutputFile>$(OutDir)$(ProjectName)_static.lib</OutputFile>
-    </Lib>
+    <Lib />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
@@ -175,10 +171,9 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBVORBISFILE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader />
       <CallingConvention>Cdecl</CallingConvention>
+      <WarningLevel>Level2</WarningLevel>
     </ClCompile>
-    <Lib>
-      <OutputFile>$(OutDir)$(ProjectName)_static.lib</OutputFile>
-    </Lib>
+    <Lib />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <Midl />
@@ -189,10 +184,9 @@
       <PrecompiledHeader>
       </PrecompiledHeader>
       <CallingConvention>Cdecl</CallingConvention>
+      <WarningLevel>Level2</WarningLevel>
     </ClCompile>
-    <Lib>
-      <OutputFile>$(OutDir)$(ProjectName)_static.lib</OutputFile>
-    </Lib>
+    <Lib />
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\lib\vorbisfile.c" />
