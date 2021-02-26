@@ -1,7 +1,9 @@
 project('libvorbis', 'c', version: '1.3.7')
 
 compiler = meson.get_compiler('c')
-link_deps = []
+link_deps = [
+    dependency('ogg')
+]
 
 incdirs = ['include', 'include/vorbis']
 
