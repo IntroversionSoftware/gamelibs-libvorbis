@@ -122,7 +122,6 @@
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_BIND_TO_CURRENT_CRT_VERSION;WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBVORBIS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader />
-      <CallingConvention>Cdecl</CallingConvention>
       <CompileAs>CompileAsC</CompileAs>
       <WarningLevel>Level2</WarningLevel>
     </ClCompile>
@@ -135,7 +134,6 @@
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_BIND_TO_CURRENT_CRT_VERSION;WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBVORBIS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader />
-      <CallingConvention>Cdecl</CallingConvention>
       <CompileAs>CompileAsC</CompileAs>
       <WarningLevel>Level2</WarningLevel>
     </ClCompile>
@@ -147,7 +145,6 @@
       <PreprocessorDefinitions>_BIND_TO_CURRENT_CRT_VERSION;WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBVORBIS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <CallingConvention>Cdecl</CallingConvention>
       <CompileAs>CompileAsC</CompileAs>
       <WarningLevel>Level2</WarningLevel>
     </ClCompile>
@@ -157,9 +154,7 @@
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_BIND_TO_CURRENT_CRT_VERSION;WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBVORBIS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader />
-      <CallingConvention>Cdecl</CallingConvention>
       <CompileAs>CompileAsC</CompileAs>
-      <DisableSpecificWarnings>4244;4100;4267;4189;4305;4127;4706;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <WarningLevel>Level2</WarningLevel>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -171,9 +166,7 @@
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_BIND_TO_CURRENT_CRT_VERSION;WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBVORBIS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader />
-      <CallingConvention>Cdecl</CallingConvention>
       <CompileAs>CompileAsC</CompileAs>
-      <DisableSpecificWarnings>4244;4100;4267;4189;4305;4127;4706;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <WarningLevel>Level2</WarningLevel>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -184,9 +177,7 @@
       <PreprocessorDefinitions>_BIND_TO_CURRENT_CRT_VERSION;WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBVORBIS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <CallingConvention>Cdecl</CallingConvention>
       <CompileAs>CompileAsC</CompileAs>
-      <DisableSpecificWarnings>4244;4100;4267;4189;4305;4127;4706;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <WarningLevel>Level2</WarningLevel>
     </ClCompile>
   </ItemDefinitionGroup>
