@@ -116,10 +116,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBVORBISFILE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MinimalRebuild>true</MinimalRebuild>
       <PrecompiledHeader />
-      <CallingConvention>Cdecl</CallingConvention>
-      <WarningLevel>Level2</WarningLevel>
     </ClCompile>
     <Lib />
   </ItemDefinitionGroup>
@@ -130,10 +127,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBVORBISFILE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MinimalRebuild>true</MinimalRebuild>
       <PrecompiledHeader />
-      <CallingConvention>Cdecl</CallingConvention>
-      <WarningLevel>Level2</WarningLevel>
     </ClCompile>
     <Lib />
   </ItemDefinitionGroup>
@@ -142,11 +136,8 @@
     <ClCompile>
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBVORBISFILE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MinimalRebuild>true</MinimalRebuild>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <CallingConvention>Cdecl</CallingConvention>
-      <WarningLevel>Level2</WarningLevel>
     </ClCompile>
     <Lib />
   </ItemDefinitionGroup>
@@ -155,8 +146,6 @@
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBVORBISFILE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader />
-      <CallingConvention>Cdecl</CallingConvention>
-      <WarningLevel>Level2</WarningLevel>
     </ClCompile>
     <Lib />
   </ItemDefinitionGroup>
@@ -168,8 +157,6 @@
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\libogg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBVORBISFILE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader />
-      <CallingConvention>Cdecl</CallingConvention>
-      <WarningLevel>Level2</WarningLevel>
     </ClCompile>
     <Lib />
   </ItemDefinitionGroup>
@@ -180,8 +167,6 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBVORBISFILE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <CallingConvention>Cdecl</CallingConvention>
-      <WarningLevel>Level2</WarningLevel>
     </ClCompile>
     <Lib />
   </ItemDefinitionGroup>
