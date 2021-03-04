@@ -46,9 +46,15 @@
 
 #if defined(_WIN32) && !defined(__SYMBIAN32__)
 #  include <malloc.h>
-#  define rint(x)   (floor((x)+0.5f))
+#  define rint(x)   ((long)floor((x)+0.5f))
 #  define NO_FLOAT_MATH_LIB
 #  define FAST_HYPOT(a, b) sqrt((a)*(a) + (b)*(b))
+#endif
+
+#if defined(_MSC_VER)
+// warning C4267: 'initializing': conversion from 'size_t' to 'long', possible loss of data
+// warning C4244: '=': conversion from 'ogg_int64_t' to 'int', possible loss of data
+#  pragma warning (disable: 4244 4267)
 #endif
 
 #if defined(__SYMBIAN32__) && defined(__WINS__)
