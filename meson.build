@@ -34,6 +34,14 @@ vorbisfile_sources = [
     'lib/vorbisfile.c'
 ]
 
+c_flags = []
+
+if target_machine.system() == 'linux'
+    c_flags += [
+        '-DHAVE_ALLOCA_H'
+    ]
+endif
+
 incdirs = include_directories(incdirs)
 
 libvorbis = static_library(
@@ -41,12 +49,14 @@ libvorbis = static_library(
     vorbis_sources,
     include_directories: incdirs,
     dependencies: link_deps,
+    c_args: c_flags,
 )
 libvorbisfile = static_library(
     'vorbisfile',
     vorbisfile_sources,
     include_directories: incdirs,
     dependencies: link_deps,
+    c_args: c_flags,
 )
 
 libvorbis_dep = declare_dependency(
