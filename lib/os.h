@@ -20,6 +20,9 @@
 #include "config.h"
 #endif
 
+#ifdef _MSC_VER
+#include <float.h>
+#endif
 #include <math.h>
 #include <ogg/os_types.h>
 
@@ -122,56 +125,27 @@ static inline int vorbis_ftoi(double f){  /* yes, double!  Otherwise,
 }
 #endif /* Special i386 GCC implementation */
 
+#if defined(_MSC_VER)
+#define VORBIS_FPU_CONTROL
+typedef unsigned int vorbis_fpu_control;
 
-/* MSVC inline assembly. 32 bit only; inline ASM isn't implemented in the
- * 64 bit compiler and doesn't work on arm. */
-#if defined(_MSC_VER) && defined(_M_IX86) && !defined(_WIN32_WCE)
-#  define VORBIS_FPU_CONTROL
-
-typedef ogg_int16_t vorbis_fpu_control;
-
-static __inline int vorbis_ftoi(double f){
-        int i;
-        __asm{
-                fld f
-                fistp i
-        }
-        return i;
+STIN int vorbis_ftoi(double f){
+    return (int)f;
 }
 
-static __inline void vorbis_fpu_setround(vorbis_fpu_control *fpu){
-  (void)fpu;
+static __forceinline void vorbis_fpu_setround(vorbis_fpu_control *fpu)
+{
+    _controlfp_s(fpu, 0, 0);
+    vorbis_fpu_control unused;
+    _controlfp_s(&unused, _RC_NEAR, _MCW_RC);
 }
 
-static __inline void vorbis_fpu_restore(vorbis_fpu_control fpu){
-  (void)fpu;
+static __forceinline void vorbis_fpu_restore(vorbis_fpu_control fpu)
+{
+    vorbis_fpu_control unused;
+    _controlfp_s(&unused, fpu, _MCW_RC);
 }
-
-#endif /* Special MSVC 32 bit implementation */
-
-
-/* Optimized code path for x86_64 builds. Uses SSE2 intrinsics. This can be
-   done safely because all x86_64 CPUs supports SSE2. */
-#if (defined(_MSC_VER) && defined(_M_X64)) || (defined(__GNUC__) && defined (__SSE2_MATH__))
-#  define VORBIS_FPU_CONTROL
-
-typedef ogg_int16_t vorbis_fpu_control;
-
-#include <emmintrin.h>
-static __inline int vorbis_ftoi(double f){
-        return _mm_cvtsd_si32(_mm_load_sd(&f));
-}
-
-static __inline void vorbis_fpu_setround(vorbis_fpu_control *fpu){
-  (void)fpu;
-}
-
-static __inline void vorbis_fpu_restore(vorbis_fpu_control fpu){
-  (void)fpu;
-}
-
-#endif /* Special MSVC x64 implementation */
-
+#endif
 
 /* If no special implementation was found for the current compiler / platform,
    use the default implementation here: */
