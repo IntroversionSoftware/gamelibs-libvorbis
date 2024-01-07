@@ -161,8 +161,8 @@ STIN int vorbis_ftoi(double f){
 }
 
 /* We don't have special code for this compiler/arch, so do it the slow way */
-#  define vorbis_fpu_setround(vorbis_fpu_control) {}
-#  define vorbis_fpu_restore(vorbis_fpu_control) {}
+#  define vorbis_fpu_setround(vorbis_fpu_control) { (void)vorbis_fpu_control; }
+#  define vorbis_fpu_restore(vorbis_fpu_control) { (void)vorbis_fpu_control; }
 
 #endif /* default implementation */
 
