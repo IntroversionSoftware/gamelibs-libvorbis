@@ -74,7 +74,7 @@ install: $(HEADERS_INST) $(libdir)/$(LIBVORBIS) $(libdir)/$(LIBVORBISFILE)
 clean:
 	$(RM) -r $(OBJ_DIR)
 
-distclean: clean
+distclean:
 	$(RM) -r $(BUILD_DIR)
 
 $(OBJ_DIR)/$(LIBVORBIS): $(LIBVORBIS_OBJECTS) | $$(@D)/.
